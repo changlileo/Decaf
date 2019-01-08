@@ -30,5 +30,12 @@ SL_COMMENT : "//" (~'\n')* '\n' {_ttype = Token.SKIP; newline (); };
 CHAR : '\'' (ESC|~('\'' | '\n' | '"' | '\\' | '\t')) '\'';
 STRING : '"' (ESC|~'"')* '"';
 
+MINUS : '-';
+
+INTLITERAL: (DIGIT)+;
+
 protected
 ESC :  '\\' ('n'|'"'|'t'|'\\');
+
+protected
+DIGIT : '0'..'9';

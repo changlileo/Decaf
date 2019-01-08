@@ -34,6 +34,9 @@ class Main {
                             case DecafScannerTokenTypes.CHAR:
                                 type = " CHARLITERAL";
                                 break;
+                            case DecafScannerTokenTypes.INTLITERAL:
+                                type = " INTLITERAL";
+                                break;
 		        			}
 		        			System.out.println (token.getLine() + type + " " + text);
 		        		}
