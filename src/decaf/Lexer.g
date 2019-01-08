@@ -27,8 +27,7 @@ WS_ : (' ' | '\n' {newline();}) {_ttype = Token.SKIP; };
 
 SL_COMMENT : "//" (~'\n')* '\n' {_ttype = Token.SKIP; newline (); };
 
-CHAR : '\'' (ESC|~('\''|'
-')) '\'';
+CHAR : '\'' (ESC|~('\'' | '\n' | '"' | '\\' | '\t')) '\'';
 STRING : '"' (ESC|~'"')* '"';
 
 protected
