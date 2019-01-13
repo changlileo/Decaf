@@ -37,6 +37,8 @@ class Main {
                             case DecafScannerTokenTypes.INTLITERAL:
                                 type = " INTLITERAL";
                                 break;
+                            default:
+                                break;
 		        			}
 		        			System.out.println (token.getLine() + type + " " + text);
 		        		}
